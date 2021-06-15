@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Film</string>
+    <string name="title_activity_main">Film</string>
+    <string name="package_name">MB.Film.starter</string>
+    <string name="custom_url_scheme">MB.Film.starter</string>
+</resources>

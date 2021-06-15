@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <ion-card id="skeleton" *ngIf="!film">
+        <ion-card-header><ion-skeleton-text></ion-skeleton-text></ion-card-header>
+        <ion-card-content class="ion-text-start">
+          <h3>
+            <ion-skeleton-text animated ></ion-skeleton-text>
+          </h3>
+          <p>
+            <ion-skeleton-text animated ></ion-skeleton-text>
+          </p>
+          <p>
+            <ion-skeleton-text animated style="width: 75%"></ion-skeleton-text>
+          </p>
+        </ion-card-content>
+    </ion-card>
+    <ion-card class="ion-padding ion-text-center" *ngIf="film" >
+      <img [src]="film.Poster" alt="{{ film.Title }}">
+      <ion-card-header>{{ film.Title }}</ion-card-header>
+      <ion-card-content class="ion-text-start">
+        {{ film.Plot }}
+        <div>
+          <ion-button (click)="lire()" [disabled]="isLecture">
+            Lire
+            <ion-icon name="musical-note" slot="end"></ion-icon>
+          </ion-button>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
